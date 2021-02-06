@@ -1,0 +1,19 @@
+package com.example;
+
+class HelloCodiva {
+  
+  public static void towersOfHanoi(int disks, String f, String a, String t) {
+    if (disks == 0)
+      return;
+  towersOfHanoi(disks-1, f, t, a);
+  System.out.println("Moving from: " +f+ " to " + t);
+  towersOfHanoi(disks-1, a,f,t);
+  }
+  
+  public static void main(String[] args) {
+    
+    towersOfHanoi(3,"A", "B", "C");
+    
+  }
+  
+}
